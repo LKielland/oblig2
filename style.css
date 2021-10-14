@@ -11,7 +11,7 @@
 body {
   font-size: var(--font-size);
   font-family: var(--main-font);
-}
+  }
 
 h1 {
     font-family: var(--main-font);
@@ -28,7 +28,7 @@ h1 {
     letter-spacing: var(--heading-spacing);
   }
   body {
-    background-color: var(--main-background-color);
+    background-image: url("images/bord.jpg");
     padding: 5% 10% 5% 10%;
     font-family: Georgia, serif;
   }
