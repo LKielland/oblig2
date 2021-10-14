@@ -83,12 +83,15 @@ h1 {
 
   }
   @media (max-width: 800px){
+    * {
+      --font-size: 0.6rem;
+    }
     /* h1{font-size:30px !important;}
     h2{font-size:24px !important;}
     h3{font-size:20px !important;}
     h4{font-size:18px !important;} */
     body {
-      font-size: 10px;
+      /* font-size: 10px; */
     }
     .picture > p > span {
       font-style: italic;

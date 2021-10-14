@@ -75,6 +75,8 @@ h1 {
     display:inline-block;
     vertical-align:middle;
   }
+
+  
   #pic1 > img {
     max-width: 50%;
   }
