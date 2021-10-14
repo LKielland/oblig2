@@ -55,7 +55,7 @@ h1 {
     max-width: 100%;
   }
 
-  .picture {
+  .picture{
     margin: 25px 25px 25px 20px;
     background-color: var(--main-white);
     object-fit: contain;
@@ -67,7 +67,7 @@ h1 {
     /*box-shadow: 0px 0px 25px var(--main-white);*/
     display: inline-block;
     vertical-align: middle;
-  }
+    }
 
   .sectionA img {
     max-width: 100%;
@@ -75,23 +75,26 @@ h1 {
 
   }
 
-  /*#pic1 > img  {
+  #pic1  {
+    transform: rotate(20deg);
+    }
+  #pic2 {
+    transform: rotate(-10deg);  }
+  #pic3 {
     max-width: 100%;
+    transform: rotate(-20deg);
   }
-  #pic2 > img {
+  #pic4 {
     max-width: 100%;
+    transform: rotate(40deg);
   }
-  #pic3 > img {
+  #pic5 {
     max-width: 100%;
+    transform: rotate(10deg);
   }
-  #pic4 > img {
+  #pic6 {
     max-width: 100%;
-  }
-  #pic5 > img {
-    max-width: 100%;
-  }
-  #pic6 > img {
-    max-width: 100%;
+    transform: rotate(60deg);
   } */
 
   .picture > p > span {
