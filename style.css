@@ -1,7 +1,13 @@
 /* Alt av verdier som repeteres kan skrives som variabler skriv dem ned under her */
 * {
+
   --font-size: 1.3rem;
   --font-size-big: calc(var(--font-size) * 4);
+  padding: 0 0;
+  margin: 0 0;
+  box-sizing: border-box;
+  --font-size: 1rem;
+  --font-size-big: calc(var(--font-size) * 6);
   --heading-spacing: 0.5rem;
   --main-white: #ffffff;
   --main-background-color: #000000;
@@ -34,12 +40,17 @@ body {
   font-size: var(--font-size);
   font-family: var(--main-font);
   color: var(--main-white);
-  padding: 5% 10% 5% 10%;
+  padding: 5px 10% 5% 10%;
   font-family: Georgia, serif;
-  background-image: url(images/bakgrunn2.jpg);
-  background-size: cover;
+  background-image: linear-gradient(#332d21,#7f7053),
+  url(images/oldWoodBG.jpg);
+  background-size: 160%;
   background-repeat: no-repeat;
+  background-blend-mode: saturation;
+  z-index: 0;
+  backdrop-filter: blur(1px);
   }
+
 h1 {
     font-family: 'dk_poison_ivyregular';
     letter-spacing: var(--heading-spacing);
@@ -54,6 +65,7 @@ h1 {
     font-style:normal;
     letter-spacing: var(--heading-spacing);
   }
+
   #content {
     padding: 10px 0;
     text-align: center;
@@ -69,8 +81,8 @@ h1 {
     object-fit: contain;
     text-align: center;
     color: var(--picture-font);
-    width: 35%;
-    height: 25%;
+    width: 25%;
+    height: 15%;
     padding: 5px;
     /*box-shadow: 0px 0px 25px var(--main-white);*/
     display: inline-block;
@@ -81,7 +93,11 @@ h1 {
   .sectionA img {
     max-width: 100%;
     border: 1px solid black;
+    filter: saturate(0);
+  }
 
+  .sectionA img:hover {
+    filter: saturate(1.2);
   }
 
   #pic1  {
@@ -104,7 +120,7 @@ h1 {
   #pic6 {
     max-width: 100%;
     transform: rotate(60deg);
-  } */
+  }
 
   .picture > p > span {
     font-family: 'marker_markregular';
