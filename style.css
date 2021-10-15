@@ -1,12 +1,11 @@
 /* Alt av verdier som repeteres kan skrives som variabler skriv dem ned under her */
 * {
 
-  --font-size: 1.3rem;
   --font-size-big: calc(var(--font-size) * 4);
   padding: 0 0;
   margin: 0 0;
   box-sizing: border-box;
-  --font-size: 1rem;
+  --font-size: 1.5rem;
   --font-size-big: calc(var(--font-size) * 6);
   --heading-spacing: 0.5rem;
   --main-white: #ffffff;
@@ -61,9 +60,12 @@ h1 {
     text-shadow: 1px 1px 1px rgb(46, 29, 4);
   }
   h2 {
+    font-family: 'dk_poison_ivyregular';
     text-transform: capitalize;
     font-style:normal;
     letter-spacing: var(--heading-spacing);
+    padding: 5px 0px 50px 0px;
+    font-size: 1.2rem;
   }
 
   #content {
