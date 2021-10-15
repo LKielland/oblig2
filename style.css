@@ -45,7 +45,7 @@ body {
   background-image: linear-gradient(#332d21,#7f7053),
   url(images/oldWoodBG.jpg);
   background-size: 160%;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-blend-mode: saturation;
   z-index: 0;
   backdrop-filter: blur(1px);
