@@ -67,7 +67,13 @@ h1 {
     padding: 5px 0px 50px 0px;
     font-size: 1.2rem;
   }
-
+  ul {
+    padding: 50px 0px 50px 0px;
+    text-align: left;
+  }
+  .reflection > p {
+    text-align: left;
+  }
   #content {
     padding: 10px 0;
     text-align: center;
@@ -95,7 +101,7 @@ h1 {
   .sectionA img {
     max-width: 100%;
     border: 1px solid black;
-    filter: saturate(0);
+    filter: saturate(0.2);
   }
 
   .sectionA img:hover {
