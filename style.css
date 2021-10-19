@@ -6,7 +6,7 @@
   box-sizing: border-box;
   --main-air: 2rem;
   --double-air: calc(var(--main-air) * 2);
-  --font-size: 2.8rem;
+  --font-size: 2.2rem;
   --font-size-big: calc(var(--font-size) * 3);
   --heading-spacing: 0.5rem;
   --main-white: #ffffff;
@@ -98,7 +98,7 @@ h2 {
   color: black;
   opacity: 0.8;
   padding: 5px 0px 50px 0px;
-  font-size: 2rem;
+  font-size: 2.8rem;
   text-shadow: 0 0 1px black;
 }
 
@@ -170,8 +170,10 @@ ul {
 .picture > p > span {
   font-family: 'marker_markregular';
   font-size: var(--font-size);
+}
 
-
+.picture {
+  padding-bottom: 2rem;
 }
 
 .coffee {
@@ -370,6 +372,10 @@ footer p {
     box-shadow: 0px 0px 5px var(--main-white);
     display: inline-block;
     vertical-align: middle;
+  }
+
+  .picture > p > span {
+    font-size: 3.8rem;
   }
 
   .reflection {
