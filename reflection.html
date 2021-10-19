@@ -5,62 +5,63 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>oblig2</title>
 </head>
-<header>
-<h1>Reflection on the process</h1>
-</header>
 <body>
-    <section id="content" class="reflection">
-        <h2>
-        Problems and solutions
-            <br>...and a little bit of pedantry
-        </h2>
-        <p>
-            Our idea was for a website that represents polaroid photos haphasardly tossed onto a wooden table.
-            We wanted the page to have a saturated look and for the photos to regain their luster when the mouse hovered over them.
-            Clicking on the photos would open them in a new tab, in full resolution, both when on a mobile and on a desktop computer. None of that silly mobile compression when clicking on the photos in other words.
-            We selected a font that had the look of having been carved into the wood for the headlines, and a "marker"-font for the scribblings on the photo-frames.
-            We concluded that any readability issues stemming from these font-choices were outweighed by going for authenticity, concidering our initial goal for the website. 
-        </p>
-        <p>
-            The biggest difficulty we faced when developing the site was in having three people all working remotely on the same website, more or less at the same time.
-            We tried dividing the workload into destinct parts, but necessity frequently brought us together hacking away at the same part.
-            As far as the CSS- and HTML-code was concerned there were no truly big hurdles, but several small ones:
-        </p>
-        <ul>
-            <li>Making the background image(s) look good both on computers and mobile browsers.</li>
-            <li>Tweaking the fonts for maximum readability while maintaining the scribbled/etched look</li>
-            <li>Making the photos look like polaroids tossed on a table. Not in itself difficult, but it resulted in a LOT of tweaking</li>
-            <li>Getting the saturation right so that the pictures really popped, without either 'focues' or 'un-focused' looking unnatural</li>
-            <li>Making the scaling between computers and mobile also work seamlessly when resizing the screen, or for several different resolutions, without jarring 'in-betweens'</li>
-        </ul>
-        <p>
-            We had a hard time finding a picture of a table that was tile-able, so we ended up having to use a photo-editing program to lessen the effects of the repeating background.
-            Stretching the background or making it static did not look 'right', but we are fairly happy with the finished look.
-        </p>
-        <p>
-            The fonts we choose are inarguably not very readable, but out of all the fonts we experimented with, the ones we ended up choosing were the best compromise between adhering to our vision and readability.
-            If our website had been more text-heavy we would have choosen differently. As you can see this section has a more readable font.
-        </p>
-        <p>
-            Polaroids have a distuct, but simple, look to them. One would thing that replicating it would be fairly straight forward but we found that it very quickly just looked like a white frame. Using an actual polaroid as a background for the images ended up in 'uncanny valley'-terretory.
-            It was just a matter of tweaking until it looked close the the real thing. There are resolutions where some of the "polaroids" still look a bit off, but at some point you just have to say "good enough".
-        </p>
-        <p>
-            Regarding the saturation we decided that both 'popping' and 'non-popping' photos needed to look natural against the background. 
-            Once again the technique itself isn't a complicated one but making the photos look right in both states were crucial. When not popping the photos should NOT appear black and white, but just faint or faded. When popping the photos should appear vibrant but not overly saturated.
-        </p>
-        <p>
-            We chose to use (picture) and the srcset attribute to change the pictures based on screen resolution. This was to make sure the images could be loaded faster on smaller devices
-            to make sure they loaded faster while still maintaining an image resolution that worked on smaller screens.
-        </p>
-        <p>
-            Lastly we struggled for a while to get the scaling of the website to work for "all" resolutions. Whenever we changed resolution, or scaled the browser window, some odd artifact would appear or something would be thrown way off.
-            The version we are submitting appear to work well, and while there might still be issues with certain resolutions, we're happy with the compatability.
-        </p>
-    </section>
-
-    
+    <main>
+        <header>
+            <h1>Reflection on the process</h1>
+        </header>
+        <section id="content" class="reflection">
+            <h2>
+            Problems and solutions
+                <br>and a little bit of pedantry
+            </h2>
+            <p>
+                Our idea was for a website that represents polaroid photos haphasardly tossed onto a wooden table.
+                We wanted the page to have a saturated look and for the photos to regain their luster when the mouse hovered over them.
+                Clicking on the photos would open them in a new tab, in full resolution, both when on a mobile and on a desktop computer. None of that silly mobile compression when clicking on the photos in other words.
+                We selected a font that had the look of having been carved into the wood for the headlines, and a "marker"-font for the scribblings on the photo-frames.
+                We concluded that any readability issues stemming from these font-choices were outweighed by going for authenticity, concidering our initial goal for the website. 
+            </p>
+            <p>
+                The biggest difficulty we faced when developing the site was in having three people all working remotely on the same website, more or less at the same time.
+                We tried dividing the workload into destinct parts, but necessity frequently brought us together hacking away at the same part.
+                As far as the CSS- and HTML-code was concerned there were no truly big hurdles, but several small ones:
+            </p>
+            <ul>
+                <li>Making the background image(s) look good both on computers and mobile browsers.</li>
+                <li>Tweaking the fonts for maximum readability while maintaining the scribbled/etched look</li>
+                <li>Making the photos look like polaroids tossed on a table. Not in itself difficult, but it resulted in a LOT of tweaking</li>
+                <li>Getting the saturation right so that the pictures really popped, without either 'focues' or 'un-focused' looking unnatural</li>
+                <li>Making the scaling between computers and mobile also work seamlessly when resizing the screen, or for several different resolutions, without jarring 'in-betweens'</li>
+            </ul>
+            <p>
+                We had a hard time finding a picture of a table that was tile-able, so we ended up having to use a photo-editing program to lessen the effects of the repeating background.
+                Stretching the background or making it static did not look 'right', but we are fairly happy with the finished look.
+            </p>
+            <p>
+                The fonts we choose are inarguably not very readable, but out of all the fonts we experimented with, the ones we ended up choosing were the best compromise between adhering to our vision and readability.
+                If our website had been more text-heavy we would have choosen differently. As you can see this section has a more readable font.
+            </p>
+            <p>
+                Polaroids have a distuct, but simple, look to them. One would thing that replicating it would be fairly straight forward but we found that it very quickly just looked like a white frame. Using an actual polaroid as a background for the images ended up in 'uncanny valley'-terretory.
+                It was just a matter of tweaking until it looked close the the real thing. There are resolutions where some of the "polaroids" still look a bit off, but at some point you just have to say "good enough".
+            </p>
+            <p>
+                Regarding the saturation we decided that both 'popping' and 'non-popping' photos needed to look natural against the background. 
+                Once again the technique itself isn't a complicated one but making the photos look right in both states were crucial. When not popping the photos should NOT appear black and white, but just faint or faded. When popping the photos should appear vibrant but not overly saturated.
+            </p>
+            <p>
+                Lastly we struggled for a while to get the scaling of the website to work for "all" resolutions. Whenever we changed resolution, or scaled the browser window, some odd artifact would appear or something would be thrown way off.
+                The version we are submitting appear to work well, and while there might still be issues with certain resolutions, we're happy with the compatability.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>2021</p>
+        <p>Pål Holdahl | Sander Hjermstad | Leif Kielland</p>
+    </footer>
 </body>
 </html>

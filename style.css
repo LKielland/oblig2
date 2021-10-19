@@ -1,12 +1,13 @@
 /* Alt av verdier som repeteres kan skrives som variabler skriv dem ned under her */
 * {
-
-  --font-size-big: calc(var(--font-size) * 4);
+  font-size: 16px;
   padding: 0 0;
   margin: 0 0;
   box-sizing: border-box;
-  --font-size: 1.5rem;
-  --font-size-big: calc(var(--font-size) * 6);
+  --main-air: 2rem;
+  --double-air: calc(var(--main-air) * 2);
+  --font-size: 2.8rem;
+  --font-size-big: calc(var(--font-size) * 3);
   --heading-spacing: 0.5rem;
   --main-white: #ffffff;
   --main-background-color: #000000;
@@ -35,22 +36,307 @@
   font-style: normal;
 
 }
+  @font-face {
+    font-family: 'NoneShallPass';
+    src: url("font/NoneShallPass-B598.ttf") format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+  }
+
+  @font-face {
+    font-family: 'stampFont';
+    src: url("font/Rubberstamp-R54A.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+
+  }
 body {
   font-size: var(--font-size);
   font-family: var(--main-font);
   color: var(--main-white);
-  padding: 5px 10% 5% 10%;
   font-family: Georgia, serif;
+  background: #393a3a;
+  height: 100%;
+  width: 100vw;
+  margin: 0 auto;
+  }
+
+main {
+  margin: 0 auto;
   background-image: linear-gradient(#332d21,#7f7053),
-  url(images/oldWoodBG.jpg);
+  url(images/oldWoodBGMobileBig.jpg);
   background-size: 160%;
   background-repeat: repeat-y;
   background-blend-mode: saturation;
   z-index: 0;
   backdrop-filter: blur(1px);
-  }
+  width: 70vw;
+  height: 100%;
+  box-shadow: 0 0 25px 20px black;
+}
+
+header {
+  padding-top: var(--double-air);
+}
 
 h1 {
+  font-family: 'NoneShallPass';
+  letter-spacing: var(--heading-spacing);
+  text-align: center;
+  text-transform: uppercase;
+  font-size: var(--font-size-big);
+  color: black;
+  opacity: 0.8;
+  text-shadow: 1px 1px 1px rgb(46, 29, 4);
+}
+h2 {
+  font-family: 'NoneShallPass';
+  text-transform: capitalize;
+  font-style: normal;
+  letter-spacing: var(--heading-spacing);
+  color: black;
+  opacity: 0.8;
+  padding: 5px 0px 50px 0px;
+  font-size: 2rem;
+  text-shadow: 0 0 1px black;
+}
+
+ul {
+  padding: 50px 0px 50px 0px;
+  text-align: left;
+}
+
+.reflection > p {
+  text-align: left;
+}
+
+#content {
+  margin-top: 0 auto;
+  text-align: center;
+}
+
+.sectionA img {
+  max-width: 100%;
+}
+
+.picture{
+  margin: 25px 50px 25px 50px;
+  background-color: var(--main-white);
+  object-fit: contain;
+  text-align: center;
+  color: var(--picture-font);
+  width: 20%;
+  height: 10%;
+  padding: 5px;
+  box-shadow: 0px 10px 35px 10px var(--main-background-color);
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'marker_markregular';
+  }
+
+.sectionA img {
+  max-width: 100%;
+  border: 1px solid black;
+  filter: saturate(0.2);
+}
+
+.sectionA img:hover {
+  filter: saturate(1.2);
+}
+
+#pic1  {
+  transform: rotate(10deg);
+  }
+#pic2 {
+  transform: rotate(-5deg);  }
+#pic3 {
+  max-width: 100%;
+  transform: rotate(-7deg);
+}
+#pic4 {
+  max-width: 100%;
+  transform: rotate(-5deg);
+}
+#pic5 {
+  max-width: 100%;
+  transform: rotate(5deg);
+}
+#pic6 {
+  max-width: 100%;
+  transform: rotate(-2deg);
+}
+
+.picture > p > span {
+  font-family: 'marker_markregular';
+  font-size: var(--font-size);
+
+
+}
+
+.coffee {
+  display: flex;
+  /* align-items: flex-start; */
+  justify-content: flex-end;
+}
+
+.coffee a {
+  color: black;
+  opacity: 0.8;
+  display: block;
+  position: relative;
+  bottom: 21rem;
+  right: 4rem;
+  font-family: 'NoneShallPass';
+  font-size: 5rem;
+  z-index: 1;
+
+}
+
+figure {
+  /* background: red; */
+}
+
+.coffee > figure > a > img {
+  /* position: relative;
+  padding-bottom: 4rem;
+  transform: rotate(-55deg);
+  max-width: 70%; */
+  border: none;
+  -webkit-filter: drop-shadow(22px 30px 25px rgba(0,0,0,0.9));
+  filter: drop-shadow(22px 30px 25px rgba(0,0,0,0.9));
+  /* z-index: 2; */
+}
+
+#cup {
+  display: block;
+  opacity: 1;
+  left: 6rem;
+  bottom: 3rem;
+  position: relative;
+  /* padding-bottom: 4rem; */
+  transform: rotate(-55deg);
+  max-width: 70%;
+  border: none;
+  /* -webkit-filter: drop-shadow(22px 30px 25px rgba(0,0,0,0.9));
+  filter: drop-shadow(22px 30px 25px rgba(0,0,0,0.9)); */
+  z-index: 2;
+}
+
+.still:hover {
+  filter: saturate(0.5);
+}
+
+.moved {
+  animation: move;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+
+.reflection {
+  max-width: 65vw;
+  margin: 0 auto;
+  color: black;
+
+}
+
+.reflection p {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  line-break: 2rem;
+  background: white;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 0 10px 5px;
+
+}
+
+.reflection ul li {
+  font-size: 1.8rem;
+}
+
+.reflection ul {
+  padding-left: 1rem 0;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  line-break: 2rem;
+  background: white;
+  padding: 2rem;
+  box-shadow: 0 0 10px 5px;
+}
+
+
+footer {
+  max-width: 70vw;
+  background: black;
+  margin: 0 auto;
+  padding-top: 2rem;
+  text-align: center;
+  height: 200px;
+  box-shadow: 0 0 25px 20px black;
+}
+
+footer p {
+  font-size: 3rem;
+  font-family: 'marker_markregular';
+  /* box-shadow: 10px 10px 20px black; */
+}
+
+@keyframes move {
+  from {
+    transform: rotate(-55deg) scale(1) skew(0deg) translate(0px);
+  }
+  to {
+    transform: rotate(10deg) scale(1) skew(0deg) translateX(-350px) translateY(300px);
+  }
+}
+
+@media (max-width: 900px){
+  * {
+    --font-size: 1rem;
+  }
+  
+  body{
+    /* font-size: var(--font-size);
+    font-family: var(--main-font);
+    color: var(--main-white);
+    padding: 5px 10% 5% 10%;
+    font-family: Georgia, serif;
+    background-image: linear-gradient(#332d21,#7f7053),
+    url(images/oldWoodBG_mobile.jpg);
+    background-size: 160%;
+    background-repeat: repeat;
+    background-blend-mode: saturation;
+    z-index: 0;
+    backdrop-filter: blur(1px);
+    height: 100vh; */
+  }
+
+  main {
+    background-image: linear-gradient(#332d21,#7f7053),
+    url(images/oldWoodBGmobileScreen.jpg);
+  }
+  .picture > p > span {
+    font-style: italic;
+    font-weight: bold;  
+    color: black;
+  }
+  .picture {
+    margin: 25px 25px 25px 20px;
+    background-color: var(--main-white);
+    object-fit: contain;
+    text-align: center;
+    width: 75%;
+    padding: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px var(--main-white);
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  h1 {
     font-family: 'dk_poison_ivyregular';
     letter-spacing: var(--heading-spacing);
     text-align: center;
@@ -58,178 +344,59 @@ h1 {
     font-size: var(--font-size-big);
     color: rgb(241, 216, 181);
     text-shadow: 1px 1px 1px rgb(46, 29, 4);
+    --font-size: 0.5rem;
+}
+
+@media (max-width: 500px){
+  * {
+    --font-size: 0.8rem;
   }
-  h2 {
-    font-family: 'dk_poison_ivyregular';
-    text-transform: capitalize;
-    font-style:normal;
-    letter-spacing: var(--heading-spacing);
-    padding: 5px 0px 50px 0px;
-    font-size: 1.2rem;
-  }
-  ul {
-    padding: 50px 0px 50px 0px;
-    text-align: left;
-  }
-  .reflection > p {
-    text-align: left;
-  }
-  #content {
-    padding: 10px 0;
-    text-align: center;
+  /* h1{font-size:30px !important;}
+  h2{font-size:24px !important;}
+  h3{font-size:20px !important;}
+  h4{font-size:18px !important;} */
+  body{
+    font-size: var(--font-size);
+    font-family: var(--main-font);
+    color: var(--main-white);
+    padding: 5px 10% 5% 10%;
+    font-family: Georgia, serif;
+    background-image: linear-gradient(#332d21,#7f7053),
+    url(images/oldWoodBGmobileScreen.jpg);
+    background-size: 160%;
+    background-repeat: repeat;
+    background-blend-mode: saturation;
+    z-index: 0;
+    backdrop-filter: blur(1px);
   }
 
-  .sectionA img {
-    max-width: 100%;
-  }
-
-  .picture{
-    margin: 25px 25px 25px 20px;
-    background-color: var(--main-white);
-    object-fit: contain;
-    text-align: center;
-    color: var(--picture-font);
-    width: 25%;
-    height: 15%;
-    padding: 5px;
-    /*box-shadow: 0px 0px 25px var(--main-white);*/
-    display: inline-block;
-    vertical-align: middle;
-    font-family: 'marker_markregular';
-    }
-
-  .sectionA img {
-    max-width: 100%;
-    border: 1px solid black;
-    filter: saturate(0.2);
-  }
-
-  .sectionA img:hover {
-    filter: saturate(1.2);
-  }
-
-  #pic1  {
-    transform: rotate(10deg);
-    }
-  #pic2 {
-    transform: rotate(-5deg);  }
-  #pic3 {
-    max-width: 100%;
-    transform: rotate(-7deg);
-  }
-  #pic4 {
-    max-width: 100%;
-    transform: rotate(-5deg);
-  }
-  #pic5 {
-    max-width: 100%;
-    transform: rotate(5deg);
-  }
-  #pic6 {
-    max-width: 100%;
-    transform: rotate(-2deg);
-  }
 
   .picture > p > span {
-    font-family: 'marker_markregular';
-    font-size: var(--font-size);
-
+    font-style: italic;
+    font-weight: bold;  
+    color: black;
   }
-  @media (max-width: 900px){
-    * {
-      --font-size: 1rem;
-    }
-    /* h1{font-size:30px !important;}
-    h2{font-size:24px !important;}
-    h3{font-size:20px !important;}
-    h4{font-size:18px !important;} */
-    body{
-      font-size: var(--font-size);
-      font-family: var(--main-font);
-      color: var(--main-white);
-      padding: 5px 10% 5% 10%;
-      font-family: Georgia, serif;
-      background-image: linear-gradient(#332d21,#7f7053),
-      url(images/oldWoodBG_mobile.jpg);
-      background-size: 160%;
-      background-repeat: repeat;
-      background-blend-mode: saturation;
-      z-index: 0;
-      backdrop-filter: blur(1px);
-    }
-    .picture > p > span {
-      font-style: italic;
-      font-weight: bold;  
-      color: black;
-    }
-    .picture {
-      margin: 25px 25px 25px 20px;
-      background-color: var(--main-white);
-      object-fit: contain;
-      text-align: center;
-      width: 75%;
-      padding: 10px;
-      border: 1px solid rgb(255, 255, 255);
-      box-shadow: 0px 0px 5px var(--main-white);
-      display: inline-block;
-      vertical-align: middle;
-    }
-    h1 {
-      font-family: 'dk_poison_ivyregular';
-      letter-spacing: var(--heading-spacing);
-      text-align: center;
-      text-transform: uppercase;
-      font-size: var(--font-size-big);
-      color: rgb(241, 216, 181);
-      text-shadow: 1px 1px 1px rgb(46, 29, 4);
-      --font-size: 0.5rem;
+  .picture {
+    margin: 25px 25px 25px 20px;
+    background-color: var(--main-white);
+    object-fit: fill;
+    text-align: center;
+    width: 75%;
+    padding: 10px;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 0px 0px 5px var(--main-white);
+    display: inline-block;
+    vertical-align: middle;
   }
-  @media (max-width: 500px){
-    * {
-      --font-size: 0.8rem;
-    }
-    /* h1{font-size:30px !important;}
-    h2{font-size:24px !important;}
-    h3{font-size:20px !important;}
-    h4{font-size:18px !important;} */
-    body{
-      font-size: var(--font-size);
-      font-family: var(--main-font);
-      color: var(--main-white);
-      padding: 5px 10% 5% 10%;
-      font-family: Georgia, serif;
-      background-image: linear-gradient(#332d21,#7f7053),
-      url(images/oldWoodBG_mobile.jpg);
-      background-size: 160%;
-      background-repeat: repeat;
-      background-blend-mode: saturation;
-      z-index: 0;
-      backdrop-filter: blur(1px);
-    }
-    .picture > p > span {
-      font-style: italic;
-      font-weight: bold;  
-      color: black;
-    }
-    .picture {
-      margin: 25px 25px 25px 20px;
-      background-color: var(--main-white);
-      object-fit: fill;
-      text-align: center;
-      width: 75%;
-      padding: 10px;
-      border: 1px solid rgb(255, 255, 255);
-      box-shadow: 0px 0px 5px var(--main-white);
-      display: inline-block;
-      vertical-align: middle;
-    }
-    h1 {
-      font-family: 'dk_poison_ivyregular';
-      letter-spacing: var(--heading-spacing);
-      text-align: left;
-      text-transform: uppercase;
-      font-size: var(--font-size-big);
-      color: rgb(241, 216, 181);
-      text-shadow: 1px 1px 1px rgb(46, 29, 4);
-      --font-size: 0.4rem;
-  }
+  h1 {
+    font-family: 'dk_poison_ivyregular';
+    letter-spacing: var(--heading-spacing);
+    text-align: left;
+    text-transform: uppercase;
+    font-size: var(--font-size-big);
+    color: rgb(241, 216, 181);
+    text-shadow: 1px 1px 1px rgb(46, 29, 4);
+    --font-size: 0.4rem;
+}
+}
+}
