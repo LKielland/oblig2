@@ -176,7 +176,6 @@ ul {
 
 .coffee {
   display: flex;
-  /* align-items: flex-start; */
   justify-content: flex-end;
 }
 
@@ -292,6 +291,11 @@ footer p {
     max-width: 60%;
   }
 
+  .reflection ul li {
+    margin-left: 1rem;
+
+  }
+
   footer{
     max-width: 100%;
     height: 100px;
@@ -324,6 +328,9 @@ footer p {
     vertical-align: middle;
   }
 
+  .reflection {
+    max-width: 85vw;
+  }
   footer{
     height: 100px;
   }
@@ -365,12 +372,42 @@ footer p {
     vertical-align: middle;
   }
 
+  .reflection {
+    max-width: 85vw;
+  }
+
+  .reflection p {
+    font-size: 2.2rem;
+    line-height: 3.5rem;
+    line-break: 2rem;
+    background: white;
+    padding: 2rem;
+    margin: 1rem 0;
+    box-shadow: 0 0 10px 5px;
+  
+  }
+
+  .reflection ul li {
+    font-size: 2.2rem;
+    line-height: 3.5rem;
+  }
+  
+  .reflection ul {
+    padding-left: 1rem 0;
+    font-size: 2.2rem;
+    line-height: 2.8rem;
+    line-break: 2rem;
+    background: white;
+    padding: 2rem;
+    box-shadow: 0 0 10px 5px;
+  }
+
   footer {
     height: 50px;
   }
 
 
-  footer > p{
+  footer > p {
     font-size: 2rem;
 
     
