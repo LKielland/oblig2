@@ -112,7 +112,7 @@ ul {
 }
 
 #content {
-  margin-top: 0 auto;
+  margin: 0 auto;
   text-align: center;
 }
 
@@ -234,7 +234,6 @@ ul {
 .reflection p {
   font-size: 1.8rem;
   line-height: 2.8rem;
-  line-break: 2rem;
   background: white;
   padding: 2rem;
   margin: 2rem 0;
@@ -247,10 +246,9 @@ ul {
 }
 
 .reflection ul {
-  padding-left: 1rem 0;
+  padding-left: 1rem;
   font-size: 1.8rem;
   line-height: 2.8rem;
-  line-break: 2rem;
   background: white;
   padding: 2rem;
   box-shadow: 0 0 10px 5px;
@@ -385,7 +383,6 @@ footer p {
   .reflection p {
     font-size: 2.2rem;
     line-height: 3.5rem;
-    line-break: 2rem;
     background: white;
     padding: 2rem;
     margin: 1rem 0;
@@ -402,7 +399,6 @@ footer p {
     padding-left: 1rem 0;
     font-size: 2.2rem;
     line-height: 2.8rem;
-    line-break: 2rem;
     background: white;
     padding: 2rem;
     box-shadow: 0 0 10px 5px;
